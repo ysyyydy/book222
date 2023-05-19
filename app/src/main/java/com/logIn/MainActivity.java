@@ -8,10 +8,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import data.DatabaseHelper;
 
 
 public class MainActivity extends Activity {
     // 调用Actvity
+    private DatabaseHelper databaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,9 @@ public class MainActivity extends Activity {
         EditText passWord = (EditText) this.findViewById(R.id.PassWordEdit);
         Button loginButton = (Button) this.findViewById(R.id.LoginButton);
         Button signUpButton = (Button) this.findViewById(R.id.SignUpButton);
+
+        databaseHelper = new DatabaseHelper(this);
+
         // 登录按钮监听器
         loginButton.setOnClickListener(
                 new OnClickListener() {
@@ -30,8 +36,10 @@ public class MainActivity extends Activity {
                         // 获取用户名和密码
                         String strUserName = userName.getText().toString().trim();
                         String strPassWord = passWord.getText().toString().trim();
+
+                        boolean loginSuccess = databaseHelper.login(strUserName, strPassWord);
                         // 判断如果用户名为"123456"密码为"123456"则登录成功
-                        if (strUserName.equals("123456") && strPassWord.equals("123456")) {
+                        if (loginSuccess) {
                             Toast.makeText(MainActivity.this, "登录成功！", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(MainActivity.this, main.EnterActivity.class);
                             startActivity(intent);
