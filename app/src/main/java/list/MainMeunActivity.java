@@ -50,27 +50,14 @@ public class MainMeunActivity extends AppCompatActivity {
         bookList.add(new Book(1, "ZZ", "Description 1"));
         bookList.add(new Book( 2, "Author 2", "Description 2"));
         bookList.add(new Book( 3, "Author 3", "Description 3"));
-        bookList.add(new Book(4, "ZZ", "Description 1"));
+        bookList.add(new Book(4, "Z333Z", "Description 1"));
         bookList.add(new Book( 5, "Author 2", "Description 2"));
         bookList.add(new Book( 6, "Author 3", "Description 3"));
-        bookList.add(new Book(7, "ZZ", "Description 1"));
+        bookList.add(new Book(7, "ZZ22", "Description 1"));
         bookList.add(new Book( 8, "Author 2", "Description 2"));
         bookList.add(new Book( 9, "Author 3", "Description 3"));
-        bookList.add(new Book(10, "ZZ", "Description 1"));
-        bookList.add(new Book( 11, "Author 2", "Description 2"));
-        bookList.add(new Book( 12, "Author 3", "Description 3"));
-        bookList.add(new Book(13, "ZZ", "Description 1"));
-        bookList.add(new Book( 14, "Author 2", "Description 2"));
-        bookList.add(new Book( 15, "Author 3", "Description 3"));
-        bookList.add(new Book(16, "ZZ", "Description 1"));
-        bookList.add(new Book( 17, "Author 2", "Description 2"));
-        bookList.add(new Book( 18, "Author 3", "Description 3"));
-        bookList.add(new Book(19, "ZZ", "Description 1"));
-        bookList.add(new Book( 20, "Author 2", "Description 2"));
-        bookList.add(new Book( 21, "Author 3", "Description 3"));
-        bookList.add(new Book(22, "ZZ", "Description 1"));
-        bookList.add(new Book( 23, "Author 2", "Description 2"));
-        bookList.add(new Book( 24, "Author 3", "Description 3"));
+        bookList.add(new Book(10, "Z1231Z", "Description 1"));
+
         // 添加更多书籍...
 
         return bookList;
