@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 内容布局 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <!-- 内容视图 -->
+        <!-- 在这里添加你的其他视图组件 -->
+
+    </LinearLayout>
+
+    <!-- 底部布局 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:background="#EAE9E7"
+            android:padding="10dp">
+
+        <Button
+                android:id="@+id/homeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/home_button"
+                android:text="首页"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="8dp"/>
+
+        <Button
+                android:id="@+id/bookshelfButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/bookshelf_button"
+                android:text="书架"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="8dp"/>
+
+        <Button
+                android:id="@+id/testButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/square_button"
+                android:text="测试"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="8dp"/>
+
+        <Button
+                android:id="@+id/promotionButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/chat_button"
+                android:text="推广"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="10dp"/>
+
+        <Button
+                android:id="@+id/myButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/person_button"
+                android:text="我的"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>
