@@ -1,15 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:gravity="center">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fragment aaaa"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
+    <!-- 添加 Toolbar -->
 
-</LinearLayout>
+
+    <!-- 内容布局 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 添加分类标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="分类"
+            android:textSize="24sp" />
+
+        <!-- 添加按钮区域 -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:columnCount="6"
+            android:rowCount="3">
+
+            <!-- 添加按钮 -->
+
+
+            <LinearLayout
+                android:id="@+id/button1"
+                android:layout_width="201dp"
+                android:layout_height="140dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent"
+                    android:text="冒险"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button2"
+                android:layout_width="201dp"
+                android:layout_height="140dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent"
+                    android:text="历史"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/button3"
+                android:layout_width="201dp"
+                android:layout_height="140dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent"
+                    android:text="推理"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button4"
+                android:layout_width="201dp"
+                android:layout_height="140dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent"
+                    android:text="魔幻"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button5"
+                android:layout_width="201dp"
+                android:layout_height="140dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent"
+                    android:text="爆笑"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button6"
+                android:layout_width="201dp"
+                android:layout_height="140dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="94dp"
+                    android:layout_height="match_parent"
+                    android:text="战争"
+                    android:gravity="center"
+                    android:textSize="30sp"/>
+
+            </LinearLayout>
+
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- 底部布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#EAE9E7"
+        android:orientation="horizontal"
+        android:padding="10dp">
+    </LinearLayout>
+
+</FrameLayout>

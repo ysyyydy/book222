@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 添加 Toolbar -->
+
+
+    <!-- 内容布局 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 添加分类标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="排行榜"
+            android:textSize="24sp" />
+
+        <!-- 添加按钮区域 -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:columnCount="6"
+            android:rowCount="3">
+
+            <!-- 添加按钮 -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="74dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <Button
+                        android:id="@+id/Buttonrqb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人气榜"/>
+
+                    <Button
+                        android:id="@+id/Buttonxsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新书榜"/>
+
+                    <Button
+                        android:id="@+id/Buttontjb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="推荐榜"/>
+
+                    <Button
+                        android:id="@+id/Buttonscb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收藏榜"/>
+
+                    <Button
+                        android:id="@+id/Buttonhpb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="好评榜"/>
+
+                    <Button
+                        android:id="@+id/Buttonrsb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="热搜榜"/>
+
+                    <Button
+                        android:id="@+id/Buttonwjb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="完结榜"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- 底部布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#EAE9E7"
+        android:orientation="horizontal"
+        android:padding="10dp">
+    </LinearLayout>
+
+</FrameLayout>

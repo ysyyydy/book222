@@ -22,6 +22,15 @@
         <activity android:name="main.EnterActivity" android:exported="true"/>
         <activity android:name="main.AboutUsActivity" android:exported="true"/>
         <activity android:name="myapplication.FragmentActivity" android:exported="true"/>
+        <activity android:name="myapplication.ButtonBB" android:exported="true"/>
+        <activity android:name="myapplication.FragmentAA" android:exported="true"/>
+        <activity android:name="myapplication.Classify_1" android:exported="true"/>
+        <activity android:name="myapplication.Classify_2" android:exported="true"/>
+        <activity android:name="myapplication.Classify_3" android:exported="true"/>
+        <activity android:name="myapplication.Classify_4" android:exported="true"/>
+        <activity android:name="myapplication.Classify_5" android:exported="true"/>
+        <activity android:name="myapplication.Classify_6" android:exported="true"/>
+        <activity android:name="myapplication.Searchbar" android:exported="true"/>
     </application>
 
 </manifest>

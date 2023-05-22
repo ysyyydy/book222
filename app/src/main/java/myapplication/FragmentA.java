@@ -1,52 +1,53 @@
 package myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import com.logIn.R;
 
-
-public class FragmentA extends Fragment {
-
+public class FragmentA extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // 加载布局文件
         View view = inflater.inflate(R.layout.fragment_a, container, false);
-// 获取按钮视图
-        Button button = view.findViewById(R.id.ButtonAA);
 
-// 设置按钮的点击事件监听器
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 在此处处理按钮点击事件，跳转到其他页面
-
-                // 如果要跳转到另一个Fragment，可以使用以下代码
+        Button downloadButton = view.findViewById(R.id.ButtonAA);
+        Button historyButton = view.findViewById(R.id.ButtonBB);
+        Button historyButton1 = view.findViewById(R.id.SearchBar);
 
 
-                FragmentAA fragment = new FragmentAA();
-                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+        downloadButton.setOnClickListener(this);
+        historyButton.setOnClickListener(this);
+        historyButton1.setOnClickListener(this);
 
-
-/*                // 如果要跳转到另一个Activity，可以使用以下代码
-                Intent intent = new Intent(requireContext(), OtherActivity.class);
-                startActivity(intent);*/
-            }
-        });
-
-        // 在这里对视图进行操作或添加事件监听器等
 
         return view;
     }
 
-    // 在这里添加你的代码
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ButtonAA:
+                // 执行分类的跳转逻辑
+                Intent intent = new Intent(requireContext(), FragmentAA.class);
+                startActivity(intent);
+                break;
+            case R.id.ButtonBB:
+                // 执行排行榜的跳转逻辑
+                Intent intent1 = new Intent(requireContext(),ButtonBB.class);
+                startActivity(intent1);
+                break;
+            case R.id.SearchBar:
+                // 执行搜索的跳转逻辑
+                Intent intent2 = new Intent(requireContext(),Searchbar.class);
+                startActivity(intent2);
+                break;
+
+        }
+    }
+
 }

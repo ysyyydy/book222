@@ -1,28 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:gravity="center">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:gravity="center"
-            android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_weight="1">
 
 
         <Button
-                android:id="@+id/ButtonAA"
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:padding="15dp"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:background="@drawable/translucent_button"
-                android:text="test1"
-                android:textSize="24dp"/>
+            android:id="@+id/SearchBar"
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="○书名/"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/ButtonAA"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:text="分类"
+            android:textSize="24dp"
+            android:background="@drawable/translucent_button"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="7.5dp"/>
+
+        <Button
+            android:id="@+id/ButtonBB"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="排行榜"
+            android:textSize="24dp"
+            android:background="@drawable/translucent_button"
+            android:padding ="15dp"
+            android:layout_marginStart ="7.5dp"
+            android:layout_marginEnd ="15dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="8">
+
 
 
     </LinearLayout>
