@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import com.logIn.R;
 
 public class Classify_4 extends Activity {
-
+//
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

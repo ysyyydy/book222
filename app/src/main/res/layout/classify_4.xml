@@ -22,7 +22,7 @@
 
     </LinearLayout>
 
-    <!-- 图书列表 -->
+    <!-- 图书列 -->
     <ListView
         android:id="@+id/bookList"
         android:layout_width="match_parent"
