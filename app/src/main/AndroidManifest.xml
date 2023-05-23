@@ -31,6 +31,12 @@
         <activity android:name="myapplication.Classify_5" android:exported="true"/>
         <activity android:name="myapplication.Classify_6" android:exported="true"/>
         <activity android:name="myapplication.Searchbar" android:exported="true"/>
+        <activity android:name="fgmente.button1" android:exported="true"/>
+        <activity android:name="fgmente.button2" android:exported="true"/>
+        <activity android:name="fgmente.button3" android:exported="true"/>
+        <activity android:name="fgmente.button4" android:exported="true"/>
+        <activity android:name="fgmente.button5" android:exported="true"/>
+        <activity android:name="fgmente.button6" android:exported="true"/>
     </application>
 
 </manifest>
