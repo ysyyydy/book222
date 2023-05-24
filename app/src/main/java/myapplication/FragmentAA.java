@@ -16,7 +16,7 @@ public class FragmentAA extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_aa);
-        LinearLayout button1 = findViewById(R.id.button1);
+        LinearLayout button1 = findViewById(R.id.button1);//获取控件
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +70,11 @@ public class FragmentAA extends Activity {
                 startActivity(intent);
             }
         });
+
+    }
+    public void onImageButtonClick7(View view) {//返回按钮
+        Intent intent = new Intent(this, FragmentActivity.class);
+        startActivity(intent);
     }
 
 }
