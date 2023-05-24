@@ -5,7 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- 添加 Toolbar -->
-
+    <ImageButton
+        android:id="@+id/imageButtonC7"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:src="@drawable/arrow_1"
+        android:onClick="onImageButtonClick7"
+        android:contentDescription="返回上一界面"/>
 
     <!-- 内容布局 -->
 
@@ -45,7 +52,7 @@
                 <ImageView
                     android:layout_width="105dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/i8" />
 
                 <TextView
                     android:layout_width="94dp"
@@ -55,7 +62,6 @@
                     android:textSize="30sp"/>
 
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/button2"
                 android:layout_width="201dp"
@@ -67,7 +73,7 @@
                 <ImageView
                     android:layout_width="105dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/i7" />
 
                 <TextView
                     android:layout_width="94dp"
@@ -90,7 +96,7 @@
                 <ImageView
                     android:layout_width="105dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/i6" />
 
                 <TextView
                     android:layout_width="94dp"
@@ -112,7 +118,7 @@
                 <ImageView
                     android:layout_width="105dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/i5" />
 
                 <TextView
                     android:layout_width="94dp"
@@ -134,7 +140,7 @@
                 <ImageView
                     android:layout_width="105dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/i4" />
 
                 <TextView
                     android:layout_width="94dp"
@@ -156,7 +162,7 @@
                 <ImageView
                     android:layout_width="105dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/i3" />
 
                 <TextView
                     android:layout_width="94dp"
@@ -170,7 +176,6 @@
 
         </GridLayout>
     </LinearLayout>
-
     <!-- 底部布局 -->
     <LinearLayout
         android:layout_width="match_parent"

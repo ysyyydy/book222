@@ -70,6 +70,11 @@ public class FragmentAA extends Activity {
                 startActivity(intent);
             }
         });
+
+    }
+    public void onImageButtonClick7(View view) {
+        Intent intent = new Intent(this, FragmentActivity.class);
+        startActivity(intent);
     }
 
 }
