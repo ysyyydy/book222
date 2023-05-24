@@ -58,8 +58,15 @@ public class FragmentB extends Fragment {
         List<Book> bookList = new ArrayList<>();
 
         bookList.add(new Book( "元尊", R.drawable.logo));
-        bookList.add(new Book( "凡人修仙传", R.drawable.logo));
+        bookList.add(new Book( "完美世界", R.drawable.logo));
         bookList.add(new Book( "斗罗大陆", R.drawable.logo));
+        bookList.add(new Book( "斗破苍穹", R.drawable.logo));
+        bookList.add(new Book( "凡人修仙传", R.drawable.logo));
+        bookList.add(new Book( "大主宰", R.drawable.logo));
+        bookList.add(new Book( "全职法师", R.drawable.logo));
+        bookList.add(new Book( "校花的贴身高手", R.drawable.logo));
+        bookList.add(new Book( "遮天", R.drawable.logo));
+        bookList.add(new Book( "重生之都市狂魔", R.drawable.logo));
 
 
         // 添加更多书籍...
