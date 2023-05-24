@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.logIn">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.logIn">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions"></uses-permission>
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -16,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
 
             </intent-filter>
+
         </activity>
         <activity android:name="com.logUp.SignUpActivity" android:exported="true"/>
         <activity android:name="list.MainMeunActivity" android:exported="true"/>
@@ -37,6 +42,17 @@
         <activity android:name="DB_book.BookDetailActivity" android:exported="true"/>
         <activity android:name="fiction.ChapterActivity" android:exported="true"/>
         <activity android:name="fgmente.button5" android:exported="true"/>
+        <activity android:name="fgmente.button1" android:exported="true"/>
+        <activity android:name="fgmente.button2" android:exported="true"/>
+        <activity android:name="fgmente.button3" android:exported="true"/>
+        <activity android:name="fgmente.button4" android:exported="true"/>
+        <activity android:name="fgmente.button6" android:exported="true"/>
+        <activity android:name="fgmente.touxiang" android:exported="true"/>
+        <activity android:name="fgmente.shezhi"  android:exported="true"/>
+        <activity android:name="fgmente.liangdu" android:exported="true"/>
+        <activity android:name="fgmente.yijian"  android:exported="true"/>
+        <activity android:name="fgmente.tijiao"  android:exported="true"/>
+        <activity android:name="local.ReadingActivity" android:exported="true"/>
 
     </application>
 

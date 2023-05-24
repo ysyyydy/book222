@@ -12,6 +12,6 @@ public class button6 extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.button6);
+        setContentView(R.layout.liangdu);
     }
 }
