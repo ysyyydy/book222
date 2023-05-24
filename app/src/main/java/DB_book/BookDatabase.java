@@ -5,7 +5,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Book.class}, version = 2) // 更新版本号为2
+@Database(entities = {Book.class}, version = 4, exportSchema=false) // 更新版本号为2
 public abstract class BookDatabase extends RoomDatabase {
 
     private static final String DATABASE_NAME = "book-db";

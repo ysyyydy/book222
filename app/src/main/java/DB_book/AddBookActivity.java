@@ -67,8 +67,8 @@ public class AddBookActivity extends AppCompatActivity {
                     // 检查数据库中是否已存在相同标题的书籍
                     List<Book> existingBooks = bookDatabase.bookDao().getBookByTitle(title);
                     if (existingBooks.isEmpty()) {
-                        Book book = new Book(title);
-                        bookDatabase.bookDao().insertBook(book);
+                        Book book = new Book(title,R.drawable.logo);
+                        bookDatabase.bookDao().insertBook(book); System.out.println(book.toString());
                     }
                 }
             }

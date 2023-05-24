@@ -31,6 +31,13 @@
         <activity android:name="myapplication.Classify_5" android:exported="true"/>
         <activity android:name="myapplication.Classify_6" android:exported="true"/>
         <activity android:name="myapplication.Searchbar" android:exported="true"/>
+        <activity android:name="local.NovelReaderActivity" android:exported="true"/>
+        <activity android:name="fiction.MainReadActivity" android:exported="true"/>
+        <activity android:name="DB_book.AddBookActivity" android:exported="true"/>
+        <activity android:name="DB_book.BookDetailActivity" android:exported="true"/>
+        <activity android:name="fiction.ChapterActivity" android:exported="true"/>
+        <activity android:name="fgmente.button5" android:exported="true"/>
+
     </application>
 
 </manifest>

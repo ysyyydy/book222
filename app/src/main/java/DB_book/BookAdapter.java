@@ -2,6 +2,8 @@ package DB_book;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.logIn.R;
+import fiction.MainReadActivity;
 
 import java.util.List;
 
@@ -69,14 +72,17 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder> {
                     if (position != RecyclerView.NO_POSITION) {
                         Book book = bookList.get(position);
                         // 在这里添加跳转到对应小说阅读界面的逻辑
-                        Intent intent = new Intent(context, BookDetailActivity.class);
-                        intent.putExtra("book", book);
+                        Intent intent = new Intent(context, MainReadActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putParcelable("book", (Parcelable) book);
+                        intent.putExtras(bundle);
+                        System.out.println(book.getTitle());
                         context.startActivity(intent);
+
                     }
                     Toast.makeText(context, "封面图片被点击", Toast.LENGTH_SHORT).show();
                 }
             });
-
             tvTitle.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.logIn.R;
-import data.Book;
+import DB_book.Book;
 
 import java.util.List;
 
@@ -56,7 +56,7 @@ public class BookListAdapter extends BaseAdapter{
 
         // 设置标题和作者的文本
         viewHolder.titleTextView.setText(book.getTitle());
-        viewHolder.authorTextView.setText(book.getAuthor());
+
 
         return convertView;
     }

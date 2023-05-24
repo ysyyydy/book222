@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.logIn.R;
+import DB_book.Book;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,6 +20,7 @@ public class MainReadActivity extends AppCompatActivity {
 
     private ListView lvChapterList;
     private List<Chapter> chapters;
+    String title="book2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +30,25 @@ public class MainReadActivity extends AppCompatActivity {
 
         lvChapterList = findViewById(R.id.lvChapterList);
 
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if (extras != null && extras.containsKey("book")) {
+            Book book = extras.getParcelable("book");
+            if (book != null) {
+                 title = book.getTitle();
+                System.out.println("Title: " + title);
+            } else {
+                System.out.println("Book object is null");
+            }
+        } else {
+            System.out.println("Intent does not contain book extra data");
+        }
+
+
+        String filename = title + ".txt";
+//        System.out.println(filename);
         // 从assets文件夹中读取小说内容
-        chapters = readNovelFromAssets("book2.txt");
+        chapters = readNovelFromAssets(filename);
 
         // 创建章节标题列表
         List<String> chapterTitles = getChapterTitles();

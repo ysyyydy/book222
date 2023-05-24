@@ -1,16 +1,16 @@
 package myapplication;
 
+import DB_book.Book;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import androidx.fragment.app.Fragment;
-
 import com.logIn.R;
-import data.Book;
+import fiction.MainReadActivity;
 import list.BookListAdapter;
 
 import java.util.ArrayList;
@@ -39,6 +39,11 @@ public class FragmentB extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 // 处理图书列表项的点击事件
                 Book selectedBook = bookList.get(position);
+                System.out.println(selectedBook.getTitle());
+                Intent intent = new Intent(getActivity(), MainReadActivity.class);
+                intent.putExtra("book", selectedBook);
+                startActivity(intent);
+
                 // 进行相关操作，如打开图书详情页面
             }
         });
@@ -52,16 +57,10 @@ public class FragmentB extends Fragment {
         // 示例中使用了一个虚拟的书籍列表数据
         List<Book> bookList = new ArrayList<>();
 
-        bookList.add(new Book(1, "ZZ", "Description 1"));
-        bookList.add(new Book(2, "Author 2", "Description 2"));
-        bookList.add(new Book(3, "Author 3", "Description 3"));
-        bookList.add(new Book(4, "Z333Z", "Description 1"));
-        bookList.add(new Book(5, "Author 2", "Description 2"));
-        bookList.add(new Book(6, "Author 3", "Description 3"));
-        bookList.add(new Book(7, "ZZ22", "Description 1"));
-        bookList.add(new Book(8, "Author 2", "Description 2"));
-        bookList.add(new Book(9, "Author 3", "Description 3"));
-        bookList.add(new Book(10, "Z1231Z", "Description 1"));
+        bookList.add(new Book( "元尊", R.drawable.logo));
+        bookList.add(new Book( "凡人修仙传", R.drawable.logo));
+        bookList.add(new Book( "斗罗大陆", R.drawable.logo));
+
 
         // 添加更多书籍...
 
