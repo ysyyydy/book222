@@ -1,34 +1,44 @@
 package list;
 
+import DB_book.Book;
+import DB_book.BookDao;
+import DB_book.BookDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.logIn.R;
-import data.Book;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainMeunActivity extends AppCompatActivity {
     private ListView bookListView;
     private List<Book> bookList;
     private BookListAdapter bookListAdapter;
+    private BookDatabase bookDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainmeun);
-
-        // 初始化书籍列表数据
-        bookList = getBookList();
-
-        // 初始化 ListView 和适配器
         bookListView = findViewById(R.id.bookList);
+        bookDatabase = BookDatabase.getInstance(this);
+        BookDao bookDao = bookDatabase.bookDao();
+
+
+        Book book = new Book("zz",R.drawable.logo);
+        bookList.add(book);
+        // 从数据库获取书籍列表数据
+        for (Book book1:bookDao.getAllBooks())
+        {
+            bookList.add(book1);
+            System.out.println(book1);
+        }
+
         bookListAdapter = new BookListAdapter(this, bookList);
-        bookListView.setAdapter((ListAdapter) bookListAdapter);
+        // 初始化 ListView 和适配器
+        bookListView.setAdapter(bookListAdapter);
 
         // 设置 ListView 的点击事件监听器
         bookListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -40,26 +50,5 @@ public class MainMeunActivity extends AppCompatActivity {
             }
         });
     }
-
-    private List<Book> getBookList() {
-        // 返回一个包含图书信息的 List<Book> 对象，用于填充列表数据
-        // 这里可以从数据库、网络或其他数据源获取图书数据
-        // 示例中使用了一个虚拟的书籍列表数据
-        List<Book> bookList = new ArrayList<>();
-
-        bookList.add(new Book(1, "ZZ", "Description 1"));
-        bookList.add(new Book( 2, "Author 2", "Description 2"));
-        bookList.add(new Book( 3, "Author 3", "Description 3"));
-        bookList.add(new Book(4, "Z333Z", "Description 1"));
-        bookList.add(new Book( 5, "Author 2", "Description 2"));
-        bookList.add(new Book( 6, "Author 3", "Description 3"));
-        bookList.add(new Book(7, "ZZ22", "Description 1"));
-        bookList.add(new Book( 8, "Author 2", "Description 2"));
-        bookList.add(new Book( 9, "Author 3", "Description 3"));
-        bookList.add(new Book(10, "Z1231Z", "Description 1"));
-
-        // 添加更多书籍...
-
-        return bookList;
-    }
 }
+
