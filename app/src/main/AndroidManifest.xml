@@ -61,6 +61,17 @@
 
 
 
+        <activity android:name="fragmentD.button10" android:exported="true"></activity>
+        <activity android:name="fragmentD.button11" android:exported="true"></activity>
+        <activity android:name="fragmentD.button12" android:exported="true"></activity>
+        <activity android:name="fragmentD.button13" android:exported="true"></activity>
+        <activity android:name="fragmentD.fukuan" android:exported="true"></activity>
+        <activity android:name="fragmentD.fuli" android:exported="true"></activity>
+        <activity android:name="fragmentD.shu" android:exported="true"></activity>
+        <activity android:name="fragmentD.shu1" android:exported="true"></activity>
+
+
+
     </application>
 
 </manifest>
