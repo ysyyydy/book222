@@ -56,4 +56,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return loginSuccess;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

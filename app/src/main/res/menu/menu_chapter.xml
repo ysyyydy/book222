@@ -2,6 +2,15 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+            android:id="@+id/action_xiao"
+            android:title="变小"
+            app:showAsAction="always"/>
+
+    <item
+            android:id="@+id/action_da"
+            android:title="变大"
+            app:showAsAction="always"/>
+    <item
             android:id="@+id/action_previous"
             android:title="上一页"
             app:showAsAction="always"/>

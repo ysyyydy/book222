@@ -2,6 +2,7 @@ package fiction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -47,16 +48,6 @@ public class ChapterActivity extends AppCompatActivity {
     }
 
     private void showPageContent() {
-/*        int startIndex = currentPage * linesPerPage;
-        int endIndex = Math.min(startIndex + linesPerPage, chapter.getContent().split("\n").length);
-        String[] lines = chapter.getContent().split("\n");
-
-        StringBuilder pageContent = new StringBuilder();
-        for (int i = startIndex; i < endIndex; i++) {
-            pageContent.append(lines[i]).append("\n");
-        }
-        tvChapterContent.setText(pageContent.toString());*/
-
         if (chapter != null) {
             int startIndex = currentPage * linesPerPage;
             String[] lines = chapter.getContent().split("\n");
@@ -67,35 +58,12 @@ public class ChapterActivity extends AppCompatActivity {
             }
             tvChapterContent.setText(pageContent.toString());
         }
-
-/*            if (chapters != null && currentChapterIndex >= 0 && currentChapterIndex < chapters.size()) {
-                Chapter currentChapter = chapters.get(currentChapterIndex);
-                int startIndex = currentPage * linesPerPage;
-                String[] lines = currentChapter.getContent().split("\n");
-
-                StringBuilder pageContent = new StringBuilder();
-                for (int i = startIndex; i < Math.min(startIndex + linesPerPage, lines.length); i++) {
-                    pageContent.append(lines[i]).append("\n");
-                }
-                tvChapterContent.setText(pageContent.toString());
-            }*/
-
     }
 
     private void updatePageNumber() {
         int pageCount = chapter.getPageContent(linesPerPage);
         String pageNumberText = String.format("Page %d/%d", currentPage + 1, pageCount);
         tvPageNumber.setText(pageNumberText);
-
-/*            if (chapters != null && currentChapterIndex >= 0 && currentChapterIndex < chapters.size()) {
-                Chapter currentChapter = chapters.get(currentChapterIndex);
-                int pageCount = currentChapter.getPageContent(linesPerPage);
-                String pageNumberText = String.format("Page %d/%d", currentPage + 1, pageCount);
-                tvPageNumber.setText(pageNumberText);
-            }*/
-
-
-
     }
 
     @Override
@@ -116,17 +84,29 @@ public class ChapterActivity extends AppCompatActivity {
                     showPageContent();
                     updatePageNumber();
                 }
-/*                if (currentChapterIndex < chapters.size() - 1) {
-                    currentChapterIndex++;
-                    currentPage = 0;
-                    showPageContent();
-                    updatePageNumber();
-                }*/
                 return true;
+
+            case R.id.action_da:
+                TextView textView = findViewById(R.id.tvChapterContent);
+                float currentSize = textView.getTextSize();
+                if (currentSize <100){
+                    float newSize = currentSize + 10;
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, newSize);
+                }
+                return true;
+
+            case R.id.action_xiao:
+                TextView tvBookTitle = findViewById(R.id.tvChapterContent);
+                float currentTextSize = tvBookTitle.getTextSize();
+                if (currentTextSize > 10) {
+                    float newTextSize = currentTextSize - 2;
+                    tvBookTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, newTextSize);
+                }
+                return true;
+
 
             default:
                 return super.onOptionsItemSelected(item);
-
         }
     }
     @Override
@@ -134,5 +114,7 @@ public class ChapterActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_chapter, menu);
         return true;
     }
+
+
 
 }

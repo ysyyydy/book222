@@ -1,26 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <!--总体布局-->
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="#E2D9EA">
+            android:orientation="vertical">
 
 
-        <TextView
-                android:id="@+id/TitleText"
+        <!--    固定顶部-->
+        <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="我是顶针我测牛魔孖"
-                android:gravity="center"
-                android:textStyle="italic"
-                android:textColor="#1246E6"
-                android:textSize="30dp"/>
+                android:layout_height="50dp"
+                android:background="#03A9F4"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+            <Button
+                    android:layout_weight="1"
+                    android:background="#03A9F4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+            <Button
+                    android:background="#03A9F4"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+            <Button
+                    android:layout_weight="1"
+                    android:background="#03A9F4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+            <Button
+                    android:background="#03A9F4"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+
+        </LinearLayout>
+        <!--    固定顶部-->
+
+        <!--中间可滑动布部分-->
+        <ScrollView android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:ignore="MissingConstraints">
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="欢迎使用我们的软件！"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="65dp"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="公司简介:我们是一家专注于开发高质量软件的公司。"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="—————————————————"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="74dp"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="为用户创造更美好、更智能、更便捷的生活。"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="64dp"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="团队介绍我们拥有一个充满活力和创新精神的团队。"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="373dp"
+                            android:layout_height="69dp"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="联系方式如有任何疑问或建议，请随时联系我们！"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="电子邮件：23543234@qq.com"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="—官方网站：www.yyyydyyy.com"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" tools:ignore="HardcodedText"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/white">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="社交媒体:Twitter Facebook"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="—————————————————"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/colorDefault">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="————————————————————"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="100dp"
+                              android:background="@color/mine_back">
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="30dp"
+                            android:gravity="center"
+                            android:text="——————————————————"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <!--中间可滑动布部分-->
+
+
+        <!--    底部固定-->
+        <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#03A9F4"
+                tools:ignore="MissingConstraints">
+            <Button
+                    android:layout_weight="1"
+                    android:background="#03A9F4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+            <Button
+                    android:background="#03A9F4"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+            <Button
+                    android:layout_weight="1"
+                    android:background="#03A9F4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+            <Button
+                    android:background="#03A9F4"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </Button>
+        </LinearLayout>
+        <!--    底部固定-->
+
     </LinearLayout>
-
-
+    <!--总体布局-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
