@@ -60,9 +60,9 @@ public class Rank_tjb extends Fragment {
         // 示例中使用了一个虚拟的书籍列表数据
         List<Book> bookList = new ArrayList<>();
 
-        bookList.add(new Book( "元尊", R.drawable.logo));
-        bookList.add(new Book( "凡人修仙传", R.drawable.logo));
-        bookList.add(new Book( "斗罗大陆", R.drawable.logo));
+        bookList.add(new Book( "大主宰", R.drawable.logo));
+        bookList.add(new Book( "重生之都市狂魔", R.drawable.logo));
+        bookList.add(new Book( "遮天", R.drawable.logo));
 
 
         // 添加更多书籍...

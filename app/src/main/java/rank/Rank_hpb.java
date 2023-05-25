@@ -60,7 +60,6 @@ public class Rank_hpb extends Fragment {
         // 示例中使用了一个虚拟的书籍列表数据
         List<Book> bookList = new ArrayList<>();
 
-        bookList.add(new Book( "元尊", R.drawable.logo));
         bookList.add(new Book( "凡人修仙传", R.drawable.logo));
         bookList.add(new Book( "斗罗大陆", R.drawable.logo));
 

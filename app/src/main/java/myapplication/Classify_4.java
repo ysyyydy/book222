@@ -21,13 +21,12 @@ public class Classify_4 extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.classify_1);
+        setContentView(R.layout.classify_4);
 
         list4 = (ListView) findViewById(R.id.bookList);
         String[] data = {
-                "斗罗大陆",
-                "元尊",
-                "凡人修仙传",
+                "校花的贴身高手",
+                "重生之都市狂魔",
         };
 
         list4.setAdapter(new ArrayAdapter<String>(this,
@@ -40,19 +39,14 @@ public class Classify_4 extends Activity {
                 String item = (String) parent.getItemAtPosition(position);
 
                 // 执行点击后的操作，例如跳转到指定文本文件
-                if (item.equals("斗罗大陆")) {
+                if (item.equals("校花的贴身高手")) {
                     Intent intent = new Intent(Classify_4.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "斗罗大陆.txt");
+                    intent.putExtra("fileName", "校花的贴身高手.txt");
                     startActivity(intent);
                 }
-                if (item.equals("元尊")) {
+                if (item.equals("重生之都市狂魔")) {
                     Intent intent = new Intent(Classify_4.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "元尊.txt");
-                    startActivity(intent);
-                }
-                if (item.equals("凡人修仙传")) {
-                    Intent intent = new Intent(Classify_4.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "凡人修仙传.txt");
+                    intent.putExtra("fileName", "重生之都市狂魔.txt");
                     startActivity(intent);
                 }
             }

@@ -21,11 +21,10 @@ public class Classify_6 extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.classify_1);
+        setContentView(R.layout.classify_6);
 
         list6 = (ListView) findViewById(R.id.bookList);
         String[] data = {
-                "斗罗大陆",
                 "元尊",
                 "凡人修仙传",
         };
@@ -40,11 +39,6 @@ public class Classify_6 extends Activity {
                 String item = (String) parent.getItemAtPosition(position);
 
                 // 执行点击后的操作，例如跳转到指定文本文件
-                if (item.equals("斗罗大陆")) {
-                    Intent intent = new Intent(Classify_6.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "斗罗大陆.txt");
-                    startActivity(intent);
-                }
                 if (item.equals("元尊")) {
                     Intent intent = new Intent(Classify_6.this, TextFileActivity.class);
                     intent.putExtra("fileName", "元尊.txt");

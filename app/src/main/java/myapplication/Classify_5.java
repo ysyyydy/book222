@@ -21,12 +21,11 @@ public class Classify_5 extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.classify_1);
+        setContentView(R.layout.classify_5);
 
         list5 = (ListView) findViewById(R.id.bookList);
         String[] data = {
                 "斗罗大陆",
-                "元尊",
                 "凡人修仙传",
         };
 
@@ -43,11 +42,6 @@ public class Classify_5 extends Activity {
                 if (item.equals("斗罗大陆")) {
                     Intent intent = new Intent(Classify_5.this, TextFileActivity.class);
                     intent.putExtra("fileName", "斗罗大陆.txt");
-                    startActivity(intent);
-                }
-                if (item.equals("元尊")) {
-                    Intent intent = new Intent(Classify_5.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "元尊.txt");
                     startActivity(intent);
                 }
                 if (item.equals("凡人修仙传")) {

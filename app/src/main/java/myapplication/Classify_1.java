@@ -15,7 +15,7 @@ import com.logIn.R;
 import rank.TextFileActivity;
 
 public class Classify_1 extends Activity {
-    ListView list1;
+    ListView list1;//声明变量
 
     //
     @Override

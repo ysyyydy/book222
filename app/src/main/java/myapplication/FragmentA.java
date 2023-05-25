@@ -78,8 +78,9 @@ public class FragmentA extends Fragment implements View.OnClickListener {
                     }
                 });
             }
-        }, 5000, 5000);
+        }, 1000, 1000);
     }
+
 
     private void stopTimer() {
         if(timer != null) {

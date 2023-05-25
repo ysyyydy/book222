@@ -62,8 +62,6 @@ public class Rank_xsb extends Fragment {
 
         bookList.add(new Book( "元尊", R.drawable.logo));
         bookList.add(new Book( "凡人修仙传", R.drawable.logo));
-        bookList.add(new Book( "斗罗大陆", R.drawable.logo));
-
 
         // 添加更多书籍...
 

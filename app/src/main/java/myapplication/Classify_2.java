@@ -21,13 +21,12 @@ public class Classify_2 extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.classify_1);
+        setContentView(R.layout.classify_2);
 
         list2 = (ListView) findViewById(R.id.bookList);
         String[] data = {
-                "斗罗大陆",
-                "元尊",
-                "凡人修仙传",
+                "全职法师",
+                "大主宰",
         };
 
         list2.setAdapter(new ArrayAdapter<String>(this,
@@ -40,19 +39,14 @@ public class Classify_2 extends Activity {
                 String item = (String) parent.getItemAtPosition(position);
 
                 // 执行点击后的操作，例如跳转到指定文本文件
-                if (item.equals("斗罗大陆")) {
+                if (item.equals("全职法师")) {
                     Intent intent = new Intent(Classify_2.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "斗罗大陆.txt");
+                    intent.putExtra("fileName", "全职法师.txt");
                     startActivity(intent);
                 }
-                if (item.equals("元尊")) {
+                if (item.equals("大主宰")) {
                     Intent intent = new Intent(Classify_2.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "元尊.txt");
-                    startActivity(intent);
-                }
-                if (item.equals("凡人修仙传")) {
-                    Intent intent = new Intent(Classify_2.this, TextFileActivity.class);
-                    intent.putExtra("fileName", "凡人修仙传.txt");
+                    intent.putExtra("fileName", "大主宰.txt");
                     startActivity(intent);
                 }
             }
