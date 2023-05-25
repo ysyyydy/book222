@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 小说封面 -->
+
+    <!-- 书名 -->
+    <TextView
+        android:id="@+id/novel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="《虚构世界》"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 作者 -->
+    <TextView
+        android:id="@+id/novel_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刘慈欣"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 价格 -->
+    <TextView
+        android:id="@+id/novel_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥ 18.00"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 购买按钮 -->
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="购买"
+        android:textSize="20sp"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>
