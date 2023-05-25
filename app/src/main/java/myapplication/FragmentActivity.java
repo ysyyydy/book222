@@ -1,5 +1,7 @@
 package myapplication;
 
+import DB_book.BookDao;
+import DB_book.BookDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.logIn.R;
+import fgmente.FragmentE;
 
 public class FragmentActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,12 +23,15 @@ public class FragmentActivity extends AppCompatActivity implements View.OnClickL
     Button btnFragmentC;
     Button btnFragmentD;
     Button btnFragmentE;
+    private BookDatabase bookDatabase;
+    private BookDao bookDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_main);
-
+        bookDatabase = BookDatabase.getInstance(this);
+        bookDao = bookDatabase.bookDao();
         // 初始化按钮
         btnFragmentA = findViewById(R.id.btnFragmentA);
         btnFragmentB = findViewById(R.id.btnFragmentB);
@@ -97,6 +103,7 @@ public class FragmentActivity extends AppCompatActivity implements View.OnClickL
     }
 
     public void switchToFragmentB() {
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragmentB);
         transaction.commit();

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/left_textview"
+            android:layout_width="169dp"
+            android:layout_height="90dp"
+            android:text="   书籍"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+    <TextView
+            android:id="@+id/right_textview"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:text="    书单"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="9dp" app:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+    <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:src="@drawable/soucang"
+            android:scaleType="centerInside"
+            android:layout_below="@id/left_textview"
+            app:srcCompat="@drawable/soucang"
+            android:layout_marginTop="49dp"/>
+
+    <Button
+            android:id="@+id/soucangbutton"
+            android:layout_width="185dp"
+            android:layout_height="71dp"
+            android:text="去读书"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="103dp"
+            app:backgroundTint="#00B4D4" android:background="@color/teal_200"/>
+</RelativeLayout>
