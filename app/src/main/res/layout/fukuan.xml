@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:layout_marginTop="49dp"
+        android:scaleType="centerInside"
+
+        android:src="@drawable/fk"
+        app:srcCompat="@drawable/fk" />
+
+
+</RelativeLayout>

@@ -19,14 +19,14 @@ import rank.Rank_xsb;
 
 public class ButtonBB extends AppCompatActivity implements View.OnClickListener {
 
-    private Rank_rqb rank_rqb;
+    private Rank_rqb rank_rqb;//声明一个类成员变量rank_rqb
     private Rank_tjb rank_tjb;
     private Rank_xsb rank_xsb;
     private Rank_hpb rank_hpb;
     private Rank_rsb rank_rsb;
     private Rank_wjb rank_wjb;
 
-    Button Buttonrqb;
+    Button Buttonrqb;//声明一个按钮对象
     Button Buttontjb;
     Button Buttonxsb;
     Button Buttonhpb;
@@ -54,7 +54,7 @@ public class ButtonBB extends AppCompatActivity implements View.OnClickListener 
         Buttonrsb.setOnClickListener(this);
         Buttonwjb.setOnClickListener(this);
 
-        // 创建 Fragment 实例
+        // 创建实例
         rank_rqb = new Rank_rqb();
         rank_tjb = new Rank_tjb();
         rank_xsb = new Rank_xsb();
@@ -70,7 +70,9 @@ public class ButtonBB extends AppCompatActivity implements View.OnClickListener 
                 .commit();
 
     }
+
     private void resetButtonColors() {
+        //设置按钮的背景颜色
         Buttonrqb.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         Buttontjb.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         Buttonxsb.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -104,6 +106,7 @@ public class ButtonBB extends AppCompatActivity implements View.OnClickListener 
         }
     }
 
+    //执行方法在框架里显示对应页面
     public void switchToFragmentrqb() {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.freast, rank_rqb);
