@@ -1,0 +1,57 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 书籍封面 -->
+
+        <TextView
+            android:id="@+id/tv_book_title"
+            android:text="《三国演义》"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_book_intro"
+            android:text="《三国演义》是中国小说史上的一部里程碑，是中国古代小说的经典名著之一。故事情节起伏跌宕、人物塑造生动形象，对中国文化及世界文化都产生了深远的影响。"
+            android:textSize="16sp"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <!-- 书籍目录 -->
+        <TextView
+            android:id="@+id/tv_book_catalog_title"
+            android:text="目录："
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_book_catalog"
+            android:text="第一回 宴桃园豪杰三结义 斩黄巾英雄首立功\n第二回 张翼德怒鞭督邮 鲁肃拒千里共丹心\n......"
+            android:textSize="16sp"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/ButtonCCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="开始阅读" />
+    </LinearLayout>
+</ScrollView>

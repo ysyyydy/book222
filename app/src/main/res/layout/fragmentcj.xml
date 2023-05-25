@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />getSupportFragmentManager().beginTransaction()
+    .add(R.id.fragment_container, new Fragmentcj())
+    .commit();
+    <Button
+        android:id="@+id/button_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="抽奖"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/text_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恭喜获得抽奖资格！"
+        android:textSize="24sp"
+        android:layout_below="@+id/button_draw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+</RelativeLayout>
